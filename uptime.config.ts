@@ -1,11 +1,17 @@
 const pageConfig = {
   // Title for your status page
-  title: "lyc8503's Status Page",
+  title: "焦煤在线页面测试 Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
-    { link: 'https://blog.lyc8503.net/', label: 'Blog' },
-    { link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
+    { link: 'https://bsm.sxccol.com/bsmanager/admin/login/index.do', label: '交易管理后台' },
+    { link: 'https://cms.sxccol.com/sxjm-cms-manager/admin/goldencms/login.do', label: '网站管理后台' },
+    { link: 'https://www.sxccol.com/', label: '焦煤在线门户', highlight: true },
+    { link: 'https://m.sxccol.com/jmapp/wx/pages/index/index.html?tabBarIndex=0', label: '焦煤在线移动端', highlight: true },
+    { link: 'https://bsp.sxccol.com/bsplatform/login/index.do', label: '焦煤在线登录' },
+    { link: 'https://mtex.sxccol.com/expcoal/exp/hangsource/buy/picksource/jydtList.do', label: '资源选购 焦煤在线-交易大厅' },
+    { link: 'https://jgzs.sxccol.com/', label: '中价 • 新华焦煤价格指数信息系统' },
+    { link: 'https://wl.sxccol.com/login?redirect=%2F', label: '物流服务' },
+    
   ],
 }
 
@@ -17,16 +23,21 @@ const workerConfig = {
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
+      //id 应该是唯一的，如果 id 保持不变，历史记录将会被保留
       id: 'foo_monitor',
       // `name` is used at status page and callback message
+      //name 在状态页面和回调消息中使用。
       name: 'My API Monitor',
       // `method` should be a valid HTTP Method
-      method: 'POST',
+      //method 应该是一个有效的HTTP方法。
+      method: 'GET',
       // `target` is a valid URL
-      target: 'https://example.com',
+      target: 'https://www.google.com',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
+      //tooltip 只用于在状态页面上显示一个工具提示
       tooltip: 'This is a tooltip for this monitor',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      //statusPageLink 只用于在状态页面上作为可点击的链接
       statusPageLink: 'https://example.com',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       expectedCodes: [200],
